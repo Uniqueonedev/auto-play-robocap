@@ -4,6 +4,7 @@ const encryptTxt = require('./script');
 
 const app = express();
 const router = express.Router();
+const port = process.env.PORT || 1973;
 
 async function getLife() {
   let getLifeLine;
@@ -245,3 +246,5 @@ try {
 } catch (error) {
   console.error(error);
 }
+
+app.listen(port, () => console.log(`Listening on port ${port}`));
