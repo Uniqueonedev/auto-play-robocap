@@ -238,7 +238,7 @@ try {
   }
 
   app.use('/', router);
-  router.get('/start', (req, res) => {
+  router.get('/start', async (req, res) => {
     console.log(`Project started......`);
     await call();
     res.send('Project Started');
