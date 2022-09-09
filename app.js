@@ -49,7 +49,7 @@ async function getLife() {
       console.log('Error: ', err.message);
     });
   reqGetLifeLine.write(
-    'usrIdx=935872&advCorp=adpopcorn&advKind=video&advIdx=LAZY_FULL_BANNER_NONSKIP&deviceId=8cf798bd627h5s9v'
+    'usrIdx=936810&advCorp=adpopcorn&advKind=video&advIdx=LAZY_FULL_BANNER_NONSKIP&deviceId=8ct798bd627h5s9v'
   );
   reqGetLifeLine.end();
 
@@ -69,7 +69,7 @@ async function Main() {
 
   const options = {
     hostname: 'www.lazyplay.io',
-    path: '/api/v1/game/start_game?gameIdx=7&usrIdx=935872',
+    path: '/api/v1/game/start_game?gameIdx=7&usrIdx=936810',
     method: 'POST',
     headers: {
       'User-Agent':
@@ -78,12 +78,12 @@ async function Main() {
       'Accept-Language': 'en-US,en;q=0.5',
       'Accept-Encoding': 'gzip, deflate',
       Referer:
-        'https://www.lazyplay.io/games/stackBuild_4/index.html?usrIdx=935872&gameIdx=7&api_game_url=https://www.lazyplay.io',
+        'https://www.lazyplay.io/games/stackBuild_4/index.html?usrIdx=936810&gameIdx=7&api_game_url=https://www.lazyplay.io',
       'Content-Type': 'application/x-www-form-urlencoded',
       'Content-Length': 2,
       Origin: 'https://www.lazyplay.io',
       Cookie:
-        '_ga=GA1.1.575998546.1662609691; JSESSIONID=33697A37EAAD08E8AF13C8A27CF85187; __gads=ID=460b340d89935062-22765ad74fd60094:T=1662609743:RT=1662609743:S=ALNI_MYSnmL7K5lF13Je6pTARvmdvMMpYw; __gpi=UID=00000994a896dbcd:T=1662609743:RT=1662609743:S=ALNI_MYDgnmR9xISMMJYKFqAZ77tYZ595w; ch-veil-id=3012ba22-792e-45c9-bb32-55d9f50fd208; ch-session-97975=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXMiLCJrZXkiOiI5Nzk3NS02MzE5Njk1MGRlYTYzMTM2OTZjNyIsImlhdCI6MTY2MjYwOTc0NCwiZXhwIjoxNjY1MjAxNzQ0fQ.x6M2wzVHvCi8G1rVERXKVWhwtZSHMRsJAzNsL4_xpPw; _ga_LPFJETZ4SG=GS1.1.1662609691.1.1.1662609898.0.0.0',
+        '_ga=GA1.1.918315794.1662743096; __gads=ID=2a51911a9e20d804-229f4b2964d6002d:T=1662743097:RT=1662743097:S=ALNI_MbqkO5nGTyJnVTWxzfj2dY09BJpLw; __gpi=UID=000009a425816044:T=1662743097:RT=1662743097:S=ALNI_MbPWrI_kUpjCbSA_meYVwDz2AhhDA; ch-veil-id=e045d389-0ef0-4df2-975b-a47918d70bf7; JSESSIONID=C1B8BC3845193379DB495922FE5089BE; ch-session-97975=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXMiLCJrZXkiOiI5Nzk3NS02MzFiNzIzYTZmYWU3M2Y2MjJiMSIsImlhdCI6MTY2Mjc0MzI4MCwiZXhwIjoxNjY1MzM1MjgwfQ.P_8tH6ppOWnv7tshu27tOFGLD6aFAaE1SeVwpdsiK2g; _ga_LPFJETZ4SG=GS1.1.1662743096.1.1.1662743664.0.0.0',
       'Sec-Fetch-Dest': 'empty',
       'Sec-Fetch-Mode': 'cors',
       'Sec-Fetch-Site': 'same-origin',
@@ -117,6 +117,14 @@ async function Main() {
   }
 
   async function automate() {
+    console.log(`wait for 3 second...`)
+    await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log(`wait finished`);
+          resolve();
+        }, 3000);
+      });
+    
     req.write(JSON.stringify({}));
     req.end();
 
@@ -136,7 +144,7 @@ async function Main() {
     const points = randomIntFromInterval(190, 210);
     console.log(`Points : ${points}`);
     const text =
-      points + '^' + points + '^' + 935872 + '^' + 7 + '^' + newEncKey;
+      points + '^' + points + '^' + 936810 + '^' + 7 + '^' + newEncKey;
     console.log(text);
     const finalKey = await encryptTxt('bItOnE0414!AgAMe', text);
     console.log(`Data : ${finalKey}`);
@@ -153,13 +161,13 @@ async function Main() {
         'Accept-Language': 'en-US,en;q=0.5',
         'Accept-Encoding': 'gzip, deflate',
         Referer:
-          'https://www.lazyplay.io/games/stackBuild_4/index.html?usrIdx=935872&gameIdx=7&api_game_url=https://www.lazyplay.io',
+          'https://www.lazyplay.io/games/stackBuild_4/index.html?usrIdx=936810&gameIdx=7&api_game_url=https://www.lazyplay.io',
         'Content-Type': 'application/x-www-form-urlencoded',
         'Content-Length': 2,
         Origin: 'https://www.lazyplay.io',
         Connection: 'close',
         Cookie:
-          '_ga=GA1.1.575998546.1662609691; JSESSIONID=33697A37EAAD08E8AF13C8A27CF85187; __gads=ID=460b340d89935062-22765ad74fd60094:T=1662609743:RT=1662609743:S=ALNI_MYSnmL7K5lF13Je6pTARvmdvMMpYw; __gpi=UID=00000994a896dbcd:T=1662609743:RT=1662609743:S=ALNI_MYDgnmR9xISMMJYKFqAZ77tYZ595w; ch-veil-id=3012ba22-792e-45c9-bb32-55d9f50fd208; ch-session-97975=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXMiLCJrZXkiOiI5Nzk3NS02MzE5Njk1MGRlYTYzMTM2OTZjNyIsImlhdCI6MTY2MjYwOTc0NCwiZXhwIjoxNjY1MjAxNzQ0fQ.x6M2wzVHvCi8G1rVERXKVWhwtZSHMRsJAzNsL4_xpPw; _ga_LPFJETZ4SG=GS1.1.1662609691.1.1.1662609898.0.0.0',
+          '_ga=GA1.1.918315794.1662743096; __gads=ID=2a51911a9e20d804-229f4b2964d6002d:T=1662743097:RT=1662743097:S=ALNI_MbqkO5nGTyJnVTWxzfj2dY09BJpLw; __gpi=UID=000009a425816044:T=1662743097:RT=1662743097:S=ALNI_MbPWrI_kUpjCbSA_meYVwDz2AhhDA; ch-veil-id=e045d389-0ef0-4df2-975b-a47918d70bf7; JSESSIONID=C1B8BC3845193379DB495922FE5089BE; ch-session-97975=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXMiLCJrZXkiOiI5Nzk3NS02MzFiNzIzYTZmYWU3M2Y2MjJiMSIsImlhdCI6MTY2Mjc0MzI4MCwiZXhwIjoxNjY1MzM1MjgwfQ.P_8tH6ppOWnv7tshu27tOFGLD6aFAaE1SeVwpdsiK2g; _ga_LPFJETZ4SG=GS1.1.1662743096.1.1.1662743664.0.0.0',
         'Sec-Fetch-Dest': 'empty',
         'Sec-Fetch-Mode': 'cors',
         'Sec-Fetch-Site': 'same-origin',
@@ -184,11 +192,11 @@ async function Main() {
         console.log('Error: ', err.message);
       });
 
-    console.log('Playing game for 60 seconds');
+    console.log('Playing game for 5 seconds');
     await new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve();
-      }, 60000);
+      }, 5000);
     });
 
     req2.write(JSON.stringify({}));
@@ -218,21 +226,17 @@ try {
       console.log(`Iteration : ${a + 1}`);
       await getLife();
       await Main();
-      console.log(`Request Successful : ${a + 1}, Waiting for 25 second`);
+      console.log(`Request Successful : ${a + 1}, Waiting for 20 second`);
       await new Promise((resolve, reject) => {
         setTimeout(() => {
           console.log(`wait finished`);
           resolve();
-        }, 25000);
+        }, 20000);
       });
     }
   }
   call();
 
-  setInterval(function () {
-    https.get('https://auto-play.herokuapp.com/');
-    console.log('Ping Our Application....To make it alive........');
-  }, 300000); // every 5 minutes (300000)
 } catch (error) {
   console.error(error);
 }
