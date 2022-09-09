@@ -3,7 +3,6 @@ const https = require('https');
 const encryptTxt = require('./script');
 
 const app = express();
-const port = process.env.PORT || 5000;
 
 async function getLife() {
   let getLifeLine;
@@ -241,4 +240,3 @@ try {
   console.error(error);
 }
 
-app.listen(port, () => console.log(`Listening on port ${port}`));
