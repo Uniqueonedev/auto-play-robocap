@@ -3,6 +3,7 @@ const https = require('https');
 const encryptTxt = require('./script');
 
 const app = express();
+const router = express.Router();
 
 async function getLife() {
   let getLifeLine;
@@ -116,14 +117,14 @@ async function Main() {
   }
 
   async function automate() {
-    console.log(`wait for 3 second...`)
+    console.log(`wait for 3 second...`);
     await new Promise((resolve, reject) => {
-        setTimeout(() => {
-          console.log(`wait finished`);
-          resolve();
-        }, 3000);
-      });
-    
+      setTimeout(() => {
+        console.log(`wait finished`);
+        resolve();
+      }, 3000);
+    });
+
     req.write(JSON.stringify({}));
     req.end();
 
@@ -234,9 +235,13 @@ try {
       });
     }
   }
-  call();
 
+  app.use('/', router);
+  router.get('/start', (req, res) => {
+    console.log(`Project started......`);
+    call();
+    res.send('Project Started');
+  });
 } catch (error) {
   console.error(error);
 }
-
