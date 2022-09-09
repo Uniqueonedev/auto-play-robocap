@@ -240,7 +240,7 @@ try {
   app.use('/', router);
   router.get('/start', (req, res) => {
     console.log(`Project started......`);
-    call();
+    await call();
     res.send('Project Started');
   });
 } catch (error) {
